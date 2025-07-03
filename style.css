@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(to right, #45C4B0 10%, #9AEBA3, #DAFDBA);
+    background-attachment: fixed;
+    margin: 0; /* Boas práticas: remover margem padrão do body */
+    padding: 0; /* Boas práticas: remover padding padrão do body */
+}
+
+main {
+    background-color: white; /* Fundo branco */
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adicionado um alpha para a sombra */
+    width: 600px; /* Largura padrão para telas maiores */
+    padding: 10px;
+    margin: auto;
+    max-width: 90%; /* Adicionado: Garante que o main não exceda 90% da largura da tela */
+    min-width: 300px; /* Adicionado: Garante que o main não fique muito pequeno em telas minúsculas */
+}
+
+h1 {
+    color: #034161;
+    text-align: center;
+    text-shadow: 1px 1px 2px #0041618a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em; /* Adicionado: Unidade relativa para fontes */
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.151);
+    font-size: 1.8em; /* Adicionado: Unidade relativa para fontes */
+}
+
+p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em; /* Adicionado: Unidade relativa para fontes */
+    line-height: 1.5; /* Adicionado: Para melhor legibilidade */
+}
+
+img {
+    max-width: 100%; /* MUITO IMPORTANTE: Garante que a imagem não transborde seu container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    margin: auto; /* Centraliza a imagem se ela for menor que o container */
+}
+
+li {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em; /* Adicionado: Unidade relativa para fontes */
+    line-height: 1.5; /* Adicionado: Para melhor legibilidade */
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Para telas menores que 600px (smartphones na vertical, por exemplo) */
+@media screen and (max-width: 600px) {
+    main {
+        width: 95%; /* Ocupa quase toda a largura da tela */
+        margin: 10px auto; /* Adiciona uma pequena margem superior/inferior */
+        border-radius: 10px; /* Borda um pouco menor para telas pequenas */
+        padding: 8px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 2em; /* Diminui o tamanho do título principal */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Diminui o tamanho do subtítulo */
+    }
+
+    p, li {
+        font-size: 0.95em; /* Ajusta o tamanho do texto para melhor leitura */
+    }
+}
+
+/* Para telas muito pequenas (largura de celulares mais antigos, por exemplo) */
+@media screen and (max-width: 380px) {
+    main {
+        padding: 5px;
+        border-radius: 5px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    p, li {
+        font-size: 0.9em;
+    }
+}
+
+/* Opcional: Para telas maiores que 1000px, talvez você queira que o main seja um pouco maior */
+@media screen and (min-width: 1000px) {
+    main {
+        width: 700px; /* Ou o tamanho que você achar ideal */
+        padding: 20px;
+    }
+}
